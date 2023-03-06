@@ -3,6 +3,11 @@ import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import {reactive, ref, watch } from 'vue'
 
+import { reactive, ref, watch } from "vue";
+
+const student = reactive({ firstname: "", lastname: "", birthyear });
+const age = ref(0);
+
 </script>
 
 <template>
@@ -12,7 +17,8 @@ import {reactive, ref, watch } from 'vue'
           <h2>Student Enrollment</h2>
           <input type="text" v-model="student.firstname" placeholder="Student First Name" />
           <input type="text" v-model="student.lastname" placeholder="Student Last Name" />
-          <input type="number" v-model="student.age" placeholder="Student Age" />
+          <input type="number" v-model="student.birthyear" placeholder="Birth Year" />
+          <label {{ age }} />
       </div>
       <Footer />
     </div>
