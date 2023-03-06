@@ -8,6 +8,16 @@ import { reactive, ref, watch } from "vue";
 const student = reactive({ firstname: "", lastname: "", birthyear });
 const age = ref(0);
 
+const calculatedAge = () => {
+  age.value = (new Date().getFullYear()) - student.birthyear;
+};
+
+
+
+watch(student, (val, oldval) => {
+  console.log(val, oldval);
+  calculatedAge();
+});
 </script>
 
 <template>
