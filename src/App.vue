@@ -27,8 +27,8 @@ watch(student, (val, oldval) => {
           <input type="text" v-model="student.firstname" placeholder="Student First Name" />
           <input type="text" v-model="student.lastname" placeholder="Student Last Name" />
           <input type="number" v-model="student.birthyear" placeholder="Birth Year" min="1900" /><br />
-          FullName: {{ fullname }}<br />
-          Age: {{ age }}
+          FullName: <strong>{{ fullname }}</strong><br />
+          Age: <strong>{{ age }}</strong>
       </div>
       <Footer />
     </div>
